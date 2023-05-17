@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Pro:200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:regular,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap%27');
+
+/* ------------------RESET E BODY-----------------*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+body{
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 clamp(0.75rem, -0.68rem + 9.1vw, 4.813rem);
+    margin:0 7vw;
+    
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
+/*------------------HEADER COMPLETA---------------------*/
+h1{
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 48px;
+    line-height: 64px;
+    line-height: 100%;
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.svg__p{
+    display: flex;
+    max-width: 610px;
+    width: 100%;
+    align-items: first baseline;
+    gap:5px;
+}
+.first__text{
+    font-family: 'Montserrat',sans-serif;
+    font-size: medium;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 17px;
+    line-height: 100%;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 400;
+}
+.cake{
+    margin-top: 20px;
+    object-fit: cover;
+}
+@media(max-width:835px){
+    body{
+        margin: 0 0;
+        padding: 0 clamp(0.75rem, -0.68rem + 1.1vw, 4.813rem);
+    }
+    h1{
+        font-size: 40px;
+    }
+    .cake{
+        height: auto;
+    }
+}
+@media(max-width:520px){
+    h1{
+        font-size: 30px;
+    }
+    .cake{
+        border-radius: 8px;
+    }
+}
+@media(max-width:392px){
+    h1{
+        font-size: 24px;
+    }
+}
+
+/*--------------------------------------------------------*/
+
+
+/*________MAIN______*/
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap:30px;
+}
+.recipe__box{
+    max-width: 216px;
+    max-height: 367px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    padding:20px 10px;
+    margin-top: 50px;
+
+}
+.flex__recipe{
+    display: flex;
+    gap:20px;
+    padding:20px 20px;
+    
+
+}
+i{
+  font-size: 28px;
+}
+.yellow{
+    color: #F2994A;
+    
+}
+#time__recipe__yellow{
+    color: #F2994A;
+}
+.desc__recipe{
+    font-family: "Montserrat",sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    line-height: 100%;
+    text-align: left;
+    vertical-align: top;
+    color:#BDBDBD;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.time__recipe{
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    line-height: 100%;
+    text-align: left;
+    vertical-align: top;
+    color:#333333;
+    font-weight: 500;
+}
+@media(min-width:1441px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+    main{
+        max-width: 1200px;
+        width: 100%;
+        
+    }
+}
+@media(max-width:768px){
+    main{
+        flex-direction: column;
+    }
+    .recipe__box{
+        margin: 0 auto;
+        display: grid;
+        max-width: 768px; 
+        width: 100%; 
+        padding: 10px 10px;
+        justify-content: start;
+        box-shadow: none;
+            
+    }
+    .recipe__box .flex__recipe:nth-child(1){
+        grid-column-start:1;
+        grid-column-end: 4;
+        
+    }
+    .flex__recipe{
+        
+        gap:10px;
+        margin-left: 0px;
+
+        
+    }
+    i{
+        font-size: 20px;
+    }
+    .time__recipe{
+        font-size: 18px;
+        
+        
+        
+    }
+    .desc__recipe{
+        font-size: 12px;
+        
+    }
+    
+}
+@media(max-width:521px){
+    .flex__recipe{
+        padding: 10px 15px;
+    }
+    i{
+        font-size: 10px;
+    }
+    .desc__recipe{
+        font-size:11px;
+    }
+    .time__recipe{
+        font-size: 11px;
+    }
+
+}
+@media(max-width:393px){
+    .flex__recipe{
+        padding: 2px;
+    }
+}
+
+
+
+
+
