@@ -59,10 +59,6 @@ h1{
     object-fit: cover;
 }
 @media(max-width:835px){
-    body{
-        margin: 0 0;
-        padding: 0 clamp(0.75rem, -0.68rem + 1.1vw, 4.813rem);
-    }
     h1{
         font-size: 40px;
     }
@@ -89,12 +85,17 @@ h1{
 
 /*________MAIN______*/
 main{
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     gap:30px;
 }
 .recipe__box{
+
+    display: flex;
+    flex-direction: column;
     max-width: 216px;
     max-height: 367px;
     width: 100%;
@@ -144,6 +145,7 @@ i{
 }
 @media(min-width:1441px){
     body{
+        margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;  
@@ -153,13 +155,35 @@ i{
         width: 100%;
         
     }
-}
-@media(max-width:768px){
-    main{
-        flex-direction: column;
+    .svg__p{
+        max-width: 900px;
+        width: 100%;
+        font-size: 20px;
     }
     .recipe__box{
-        margin: 0 auto;
+        max-height:350px ;
+        max-width: 300px;
+    }
+    i{
+        font-size: 35px;
+    }
+    .desc__recipe, .time__recipe{
+        font-size: 20px;
+    }
+    
+    
+
+}
+@media(max-width:768px){
+    body{
+        margin: 0;
+    }
+    main{ 
+        flex-direction: column;
+
+    }
+    .recipe__box{
+        margin: 0 auto 20px auto;
         display: grid;
         max-width: 768px; 
         width: 100%; 
@@ -174,11 +198,8 @@ i{
         
     }
     .flex__recipe{
-        
         gap:10px;
         margin-left: 0px;
-
-        
     }
     i{
         font-size: 20px;
@@ -196,6 +217,9 @@ i{
     
 }
 @media(max-width:521px){
+    body{
+        margin: 0;
+    }
     .flex__recipe{
         padding: 10px 15px;
     }
@@ -215,6 +239,163 @@ i{
         padding: 2px;
     }
 }
+@media(max-width:332px){
+    .desc__recipe, .time__recipe{
+        font-size: 10px;
+    }
+}
+
+
+/*--------------RECEITAS E INGREDIENTES--------------*/
+.section__texts{
+    max-width: 800px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+     
+}
+
+.section__texts h3 {
+    max-width: 100%;
+    font-family: 'Playfair Display';
+    font-size: 24px;
+    line-height: 32px;
+    line-height: 100%;
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    font-weight:700;
+    color: #333333;
+    margin-top: 25px;
+  }
+  
+  .section__texts p {
+    
+    margin-top: 20px;
+
+  }
+  .box__p , .orange__p{
+    display: flex;
+    align-items: first baseline;
+    gap:10px;
+
+  }
+  .box{
+    max-width: 21px;
+    width: 100%;
+    height: 21px;
+    border: 1px solid #828282;
+    border-radius: 1px;
+
+  }
+  .recipes{
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 18px;
+    line-height: 24px;
+    line-height: 100%;
+    text-align: left;
+    vertical-align: top;
+    color: #333333;
+    margin: 30px 0;
+  }
+  .p__box{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    line-height: 128%;
+    text-align: left;
+    vertical-align: top;
+  }
+  span{
+    font-weight: bold;
+  }
+  .dif__span{
+    font-weight: 500;
+  }
+  .box__orange{
+    max-width: 36px;
+    width: 100%;
+    height: 36px;
+    background-color: #F2994A;
+    border-radius: 1px;
+    padding-top: 2px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Playfair Display';
+    color: #fff;
+    font-weight: bold;
+    line-height: 32px;
+    line-height: 100%;
+    vertical-align: top;
+
+  }
+  .orange__p{
+    margin:22px 0;
+  }
+  .p__orange{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    line-height: 128%;
+    text-align: left;
+    vertical-align: top;
+  }
+  .source{
+    color: #BDBDBD;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    line-height: 150%;
+    text-align: left;
+    vertical-align: top;
+
+  }
+  footer{
+        margin-top: 3%;
+        text-align: center;
+  }
+  footer p{
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 100%;
+    font-weight: 600;
+  }
+  footer a{
+    text-decoration: underline 2px;
+    color: black;
+    font-style: italic;
+  }
+  
+  @media (max-width:768px) {
+        .section__texts h3{
+            padding-top:0%;
+            margin-top: -5%;
+        }
+  }
+  /*-----------MELHORANDO TAMANHO DA FONTE PARA 4K----------*/
+  @media(min-width:1441px){
+    h1{
+        font-size: 80px;
+    }
+    .first__text{  
+        font-size: 20px;
+    }
+    .section__texts h3{
+        font-size: 40px;
+    }
+    .recipes{
+        font-size: 24px;
+    }
+    .p__box, .p__orange{
+        font-size: 20px;
+    }
+    
+    
+    
+  }
 
 
 
